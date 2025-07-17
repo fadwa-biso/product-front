@@ -81,7 +81,7 @@ const ProductDetails = () => {
                   {product.name}
                 </h1>
                 <p className="text-lg text-gray-600">
-                  {product.description}
+                  {product.description.more_information}
                 </p>
               </div>
 
