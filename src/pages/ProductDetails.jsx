@@ -258,26 +258,49 @@ const ProductDetails = () => {
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-lg font-semibold text-gray-800 mb-4">Description</h3>
-                  <p className="text-gray-600 mb-6">{product.longDescription}</p>
+                  <p className="text-gray-600 mb-6">{product.description.more_information}</p>
                   
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Active Ingredients</h3>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Scientific Name</h3>
+                  <p className="text-gray-600 mb-4">{product.description.scientific_name}</p>
+                  
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Belongs To</h3>
+                  <p className="text-gray-600 mb-6">{product.description.belongs_to}</p>
+                  
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Medical Uses</h3>
                   <ul className="space-y-2">
-                    {product.activeIngredients.map((ingredient, index) => (
+                    {product.description.medical_uses.map((use, index) => (
                       <li key={index} className="text-gray-600 flex items-center">
                         <div className="w-2 h-2 bg-teal-400 rounded-full mr-3"></div>
-                        {ingredient}
+                        {use}
                       </li>
                     ))}
                   </ul>
                 </div>
                 
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Dosage & Usage</h3>
-                  <p className="text-gray-600 mb-6">{product.dosage}</p>
-                  
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Warnings</h3>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Usage Instructions</h3>
                   <ul className="space-y-2 mb-6">
-                    {product.warnings.map((warning, index) => (
+                    {product.description.usage_instructions.map((instruction, index) => (
+                      <li key={index} className="text-gray-600 flex items-center">
+                        <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+                        {instruction}
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Side Effects</h3>
+                  <ul className="space-y-2 mb-6">
+                    {product.description.side_effects.map((effect, index) => (
+                      <li key={index} className="text-gray-600 flex items-center">
+                        <div className="w-2 h-2 bg-orange-400 rounded-full mr-3"></div>
+                        {effect}
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Warnings & Precautions</h3>
+                  <ul className="space-y-2 mb-6">
+                    {product.description.warnings_precautions.map((warning, index) => (
                       <li key={index} className="text-gray-600 flex items-center">
                         <div className="w-2 h-2 bg-red-400 rounded-full mr-3"></div>
                         {warning}
@@ -286,11 +309,35 @@ const ProductDetails = () => {
                   </ul>
                   
                   <div className="bg-gray-50 p-4 rounded-lg">
-                    <h4 className="font-semibold text-gray-800 mb-2">Product Details</h4>
+                    <h4 className="font-semibold text-gray-800 mb-2">Additional Information</h4>
                     <div className="space-y-1 text-sm text-gray-600">
-                      <p><span className="font-medium">Manufacturer:</span> {product.manufacturer}</p>
-                      <p><span className="font-medium">Expiry Date:</span> {product.expiryDate}</p>
+                      <p><span className="font-medium">Mechanism of Action:</span> {product.description.mechanism_of_action}</p>
+                      <p><span className="font-medium">Pregnancy & Breastfeeding:</span> {product.description.pregnancy_breastfeeding}</p>
                     </div>
+                    
+                    <h5 className="font-semibold text-gray-800 mt-4 mb-2">Storage Instructions</h5>
+                    <ul className="space-y-1">
+                      {product.description.storage_instructions.map((instruction, index) => (
+                        <li key={index} className="text-sm text-gray-600 flex items-center">
+                          <div className="w-1 h-1 bg-gray-400 rounded-full mr-2"></div>
+                          {instruction}
+                        </li>
+                      ))}
+                    </ul>
+                    
+                    {product.description.helpful_tips.length > 0 && (
+                      <>
+                        <h5 className="font-semibold text-gray-800 mt-4 mb-2">Helpful Tips</h5>
+                        <ul className="space-y-1">
+                          {product.description.helpful_tips.map((tip, index) => (
+                            <li key={index} className="text-sm text-gray-600 flex items-center">
+                              <div className="w-1 h-1 bg-green-400 rounded-full mr-2"></div>
+                              {tip}
+                            </li>
+                          ))}
+                        </ul>
+                      </>
+                    )}
                   </div>
                 </div>
               </div>

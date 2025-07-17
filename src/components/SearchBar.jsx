@@ -22,19 +22,19 @@ const SearchBar = ({
   // Mock products data for suggestions
   const allProducts = [
     { id: 1, name: 'Panadol Extra', category: 'Pain Relief' },
-    { id: 2, name: 'Panadol Night', category: 'Pain Relief' },
-    { id: 3, name: 'Panadol Cold & Flu', category: 'Cold & Flu' },
-    { id: 4, name: 'Aspirin 100mg', category: 'Pain Relief' },
-    { id: 5, name: 'Aspirin Plus', category: 'Pain Relief' },
-    { id: 6, name: 'Vitamin D3 1000IU', category: 'Vitamins' },
-    { id: 7, name: 'Vitamin C 500mg', category: 'Vitamins' },
-    { id: 8, name: 'Vitamin B Complex', category: 'Vitamins' },
-    { id: 9, name: 'Omega-3 Fish Oil', category: 'Supplements' },
-    { id: 10, name: 'Calcium + Magnesium', category: 'Supplements' },
-    { id: 11, name: 'Ibuprofen 400mg', category: 'Pain Relief' },
-    { id: 12, name: 'Cough Syrup', category: 'Cold & Flu' },
-    { id: 13, name: 'Throat Lozenges', category: 'Cold & Flu' },
-    { id: 14, name: 'Antacid Tablets', category: 'Digestive Health' },
+    { id: 2, name: 'Aspirin 100mg', category: 'Cardiovascular' },
+    { id: 3, name: 'Ibuprofen 400mg', category: 'Pain Relief' },
+    { id: 4, name: 'Vitamin D3 1000IU', category: 'Vitamins' },
+    { id: 5, name: 'Omega-3 Fish Oil', category: 'Supplements' },
+    { id: 6, name: 'Cold & Flu Relief', category: 'Cold & Flu' },
+    { id: 7, name: 'Antacid Tablets', category: 'Digestive Health' },
+    { id: 8, name: 'Hydrocortisone Cream 1%', category: 'Skin Care' },
+    { id: 9, name: 'Cough Syrup', category: 'Cold & Flu' },
+    { id: 10, name: 'Throat Lozenges', category: 'Cold & Flu' },
+    { id: 11, name: 'Vitamin C 500mg', category: 'Vitamins' },
+    { id: 12, name: 'Calcium Tablets', category: 'Supplements' },
+    { id: 13, name: 'Antihistamine', category: 'Allergy' },
+    { id: 14, name: 'Eye Drops', category: 'Eye Care' },
     { id: 15, name: 'Probiotics', category: 'Digestive Health' }
   ];
 
