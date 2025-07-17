@@ -442,7 +442,7 @@ const Products = () => {
                               </h3>
                               
                               <p className="text-gray-600 mb-4">
-                                {product.description}
+                                {product.description.more_information}
                               </p>
                               
                               <div className="flex items-center justify-between">
